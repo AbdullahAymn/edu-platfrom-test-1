@@ -15,6 +15,7 @@ import Cookies from "js-cookie";
 import TeacherGrid from "./pages/TeachersPage/TeacherGrid";
 import PlansPage from "./pages/PlansPage/PlansPage";
 import { CourseLayout } from "./components/Layout/CourseLayout";
+import StudentFile from "./pages/StudentFile/studentFile";
 
 i18n
   .use(initReactI18next)
@@ -61,6 +62,7 @@ function App() {
           
           <Route path="/payment" element={<Payment />} />
           <Route path="/check" element={<Check />} />
+          <Route path="/student-file" element={<StudentFile />} />
 
           <Route path="*" element={<h1>Not Found</h1>} />
         </Routes>
