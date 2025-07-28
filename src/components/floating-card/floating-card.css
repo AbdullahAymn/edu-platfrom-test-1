@@ -1,0 +1,13 @@
+.floating-card{
+    width: 6.8rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 20px 5px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    border: rgba(255, 255, 255, 0.1) solid 1px;
+    animation: float 10s ease-in-out infinite;
+}

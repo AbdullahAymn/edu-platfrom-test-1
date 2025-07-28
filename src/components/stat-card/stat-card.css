@@ -1,0 +1,35 @@
+.stat-card{
+    width: 8.4rem;
+    height: 11.4rem;
+    padding: 20px 5px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    border: rgba(255, 255, 255, 0.1) solid 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(102, 126, 234, 0.25);
+}
+
+.stat-value{
+    font-size: 2.9rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    top: 0;
+    left: 0;
+
+}
+
+.stat-name{
+    color: white;
+    margin-top: 8px;
+}

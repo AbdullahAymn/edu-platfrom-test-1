@@ -1,0 +1,74 @@
+.navbar{
+    padding: 3rem 5%;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border-bottom: rgba(255, 255, 255, 0.1) solid 1px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.nav-brand{
+    
+    width: fit-content;
+}
+
+.nav-brand h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-brand span{
+    color: #b3b3d1;
+    font-size: 90%;
+}
+
+.nav-links{
+    color: #b3b3d1;
+}
+.nav-links a{
+    color: #b3b3d1;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-links a::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-links a:hover::before{
+    width: 100%;
+}
+
+.cta-button{
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(102, 126, 234, 0.5);
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-links{
+        flex-direction: column;
+    }
+}

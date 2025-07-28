@@ -1,10 +1,14 @@
-import { t } from "i18next";
+import FeaturesSection from "../../components/Layout/Features Section/Features";
+import Hero from "../../components/Layout/Hero Section/Hero";
+import SetupSection from "../../components/Layout/Setup Section/Setup";
+
 
 export default function Home() {
   return (
     <div>
-      Home Page
-      <h1 className=" text-center ">{t("hi")}</h1>
+      <Hero />
+      <FeaturesSection />
+      <SetupSection />
     </div>
   );
 }
