@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FaUser } from "react-icons/fa";
 
 export default function NavBar() {
   return (
@@ -9,6 +10,9 @@ export default function NavBar() {
       </Link>
       <Link to="/check" className="text-blue-500 font-semibold text-lg hover:underline">
         Check
+      </Link>
+      <Link to="/student-file" className="flex items-center text-blue-500 font-semibold text-lg hover:underline">
+        <FaUser size={24} />  ملف الطالب
       </Link>
     </div>
   );
