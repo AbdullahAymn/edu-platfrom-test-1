@@ -27,8 +27,8 @@ const Payment: React.FC = () => {
               <p className="card-text text-white">احصل على خصم 30% على الاشتراك السنوي</p>
               <div className='custom-translate-up bg-white hover:bg-gray-100 text-center mt-5  py-3 rounded-lg md:w-[25%] w-[70%] mx-auto'>
                 <Link to="/check">
-                  <span className='benifit text-xl text-gray-900'>استفد من العرض الآن </span>
-                  <span><i className='fas fa-tag me-3 text-gray-900'></i></span>
+                  <span className='benifit text-xl font-bold text-indigo-600'>استفد من العرض الآن </span>
+                  <span><i className='fas fa-tag me-3 text-indigo-600'></i></span>
                 </Link>
               </div>
             </div>
@@ -107,7 +107,7 @@ const Payment: React.FC = () => {
               </div>
             </div>
 
-            <div className="inner relative overflow-hidden bg-black overflow-hidden relative   text-center py-9 my-5 rounded-xl  outline-1 outline-gray-700 hover:translate-y-[-5px] transition hover:shadow-xl hover:shadow-indigo-200">
+            <div className="inner relative overflow-hidden bg-black  text-center py-9 my-5 rounded-xl  outline-1 outline-gray-700 hover:translate-y-[-5px] transition hover:shadow-xl hover:shadow-indigo-200">
               <div className="card-top-line "></div>
               <div className='absolute top-[20px] right-[-34px] lovely-color text-white rotate-45 py-1 font-bold px-8'>الأكثر شعبية</div>
               
@@ -135,7 +135,7 @@ const Payment: React.FC = () => {
                 </li>
               </ul>
               <div className="custom-translate-up transition ">
-                <Link to='/check' className="text-lg font-bold py-3 px-5 bg-white rounded-lg  text-gray-900  hover:text-black hover:bg-gray-300">
+                <Link to='/check' className="text-lg font-bold py-3 px-5 bg-white rounded-lg text-black hover:bg-gray-300">
                   اختر الخطه
                 </Link>
               </div>

@@ -132,7 +132,7 @@ const Check: React.FC = () => {
     <span dir="auto" className="text-white text-3xl font-bold">ج.م</span>
     <span className="text-white  text-3xl font-bold">900</span>
   </div>
-  <p className="text-gray-400 text-lg pt-5">عام كامل</p>
+  <p className="text-gray-400 text-lg py-5">عام كامل</p>
 </div>
 <div
   onClick={() => setSelectedPlanId('single')}
