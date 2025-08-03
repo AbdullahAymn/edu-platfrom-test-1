@@ -42,40 +42,50 @@ const Payment: React.FC = () => {
         <div className="container  w-[90%] mx-auto lg:py-8 px-5">
           <div className="row grid grid-cols-1 md:grid-cols-2 gap-5 lg:py-5">
 
-            <div className="inner text-center relative overflow-hidden py-9 my-5 rounded-xl main-color main-text  hover:translate-y-[-5px]   hover:shadow-lg hover:shadow-indigo-400 transition-all outline-1 outline-gray-700">
-              <div className="card-top-line"></div>
-              
-      
-                           <div className="w-[50px] h-[50px] mx-auto rounded-full flex items-center justify-center lovely-color">
-                  <i className="fas fa-calendar-day fa-2xl"></i>
-              </div>
-              <h4 dir="auto" className="text-2xl font-bold my-4 main-text">اشتراك شهرى</h4>
-              <div>
-                <span dir="auto" className="text-violet-500 text-3xl font-bold ">ج.م</span>
-                <span className="text-violet-500 text-3xl font-bold">150 </span>
-              </div>
-              <ul dir="auto">
-                <li className='my-4 text-xl'>
-                  <i className="fas fa-check text-green-700 ml-1"></i>
-                  جميع المواد
-                </li>
-                <li className='my-4 text-xl'>
-                  <i className="fas fa-check text-green-700 ml-1"></i>
-                  دعم فنى
-                </li>
-                <li className='my-4 text-xl'>
-                  <i className="fas fa-check text-green-700 ml-1 mb-5"></i>
-                  تحديثات مستمره
-                </li>
-              </ul>
-              <div className="custom-translate-up transition">
-                <Link to='/check' className="text-lg font-bold py-3 px-5 border border-violet-900 rounded-lg  outline-1 text-violet-400 hover:bg-violet-900 hover:text-white transition transform hover:outline-0  custom-translate-up">
-                  اختر الخطه
-                </Link>
-              </div>
-            </div>
+        <div className="inner text-center relative overflow-hidden py-9 my-5 rounded-xl main-color main-text transition-all outline-1 outline-gray-700 
+        group hover:translate-y-[-5px] hover:shadow-lg hover:shadow-indigo-400"> 
 
-            <div className="inner relative overflow-hidden text-center py-9 my-5 rounded-xl  main-color main-text hover:translate-y-[-5px] transition hover:shadow-lg hover:shadow-indigo-400 outline-1 outline-gray-700">
+  <div className="absolute top-[-55px] right-[-55px] w-30 h-30 lovely-color rounded-full transform scale-100 group-hover:scale-125 transition-transform duration-300 z-10"></div> 
+  
+  <div className="absolute bottom-[-55px] left-[-55px] w-30 h-30 lovely-color rounded-full transform scale-100 group-hover:scale-125 transition-transform duration-300 z-10"></div> 
+
+  <div className="card-top-line"></div> 
+
+  <div className="w-[50px] h-[50px] mx-auto rounded-full flex items-center justify-center lovely-color"> 
+    <i className="fas fa-calendar-day fa-2xl"></i> 
+  </div> 
+
+  <h4 dir="auto" className="text-2xl font-bold my-4 main-text">اشتراك شهرى</h4> 
+
+  <div> 
+    <span dir="auto" className="text-violet-500 text-3xl font-bold">ج.م</span> 
+    <span className="text-violet-500 text-3xl font-bold">150</span> 
+  </div> 
+
+  <ul dir="auto"> 
+    <li className='my-4 text-xl'> 
+      <i className="fas fa-check text-green-700 ml-1"></i> جميع المواد 
+    </li> 
+    <li className='my-4 text-xl'> 
+      <i className="fas fa-check text-green-700 ml-1"></i> دعم فنى 
+    </li> 
+    <li className='my-4 text-xl mb-5'> 
+      <i className="fas fa-check text-green-700 ml-1"></i> تحديثات مستمره 
+    </li> 
+  </ul> 
+
+  <div className="custom-translate-up transition"> 
+    <Link to='/check' className="text-lg font-bold py-3 px-5 border border-violet-900 rounded-lg outline-1 text-violet-400 hover:bg-violet-900 hover:text-white transition transform hover:outline-0 custom-translate-up"> 
+      اختر الخطه 
+    </Link> 
+  </div> 
+</div>
+
+
+            <div className="inner relative overflow-hidden text-center py-9 my-5 rounded-xl  main-color main-text  group hover:translate-y-[-5px] transition hover:shadow-lg hover:shadow-indigo-400 outline-1 outline-gray-700">
+
+                <div className="absolute top-[-55px] right-[-55px] w-30 h-30 lovely-color rounded-full transform scale-100 group-hover:scale-125 transition-transform duration-300 z-10"></div> 
+                  <div className="absolute bottom-[-55px] left-[-55px] w-30 h-30 lovely-color rounded-full transform scale-100 group-hover:scale-125 transition-transform duration-300 z-10"></div> 
                <div className="card-top-line"></div>
               
                       <div className="w-[50px] h-[50px] mx-auto rounded-full flex items-center justify-center lovely-color">
@@ -141,8 +151,10 @@ const Payment: React.FC = () => {
               </div>
             </div>
 
-            <div className="inner relative overflow-hidden text-center py-9 my-5 rounded-xl main-color main-text  hover:translate-y-[-5px] transition hover:shadow-lg hover:shadow-indigo-400 outline-1 outline-gray-700">
+            <div className="inner relative overflow-hidden text-center py-9 my-5 rounded-xl main-color main-text group hover:translate-y-[-5px] transition hover:shadow-lg hover:shadow-indigo-400 outline-1 outline-gray-700">
               <div className="w-[50px] h-[50px] mx-auto rounded-full flex items-center justify-center bg-black">
+                     <div className="absolute top-[-55px] right-[-55px] w-30 h-30 lovely-color rounded-full transform scale-100 group-hover:scale-125 transition-transform duration-300 z-10"></div> 
+                       <div className="absolute bottom-[-55px] left-[-55px] w-30 h-30 lovely-color rounded-full transform scale-100 group-hover:scale-125 transition-transform duration-300 z-10"></div> 
                  <div className="card-top-line"></div>
                 
                    <div className="w-[50px] h-[50px] mx-auto rounded-full flex items-center justify-center lovely-color">
