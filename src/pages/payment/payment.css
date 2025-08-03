@@ -1,11 +1,29 @@
-.card { 
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); 
-  transition: all 0.3s ease; 
-} 
 
-.card:hover { 
+.sec-color{
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); 
+}
+
+
+.lovely-color{
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+.my-color{
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+.my-color:hover { 
   transform: translateY(-5px); 
 } 
+.card-top-line{
+  position: absolute;
+  top: 0;
+  left: 0;
+height: 4px;
+width: 100%;
+z-index: 444;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+}
+
 
 div.benifit { 
   background: #fff; 
@@ -16,10 +34,5 @@ div.benifit {
   transform: translateY(-3px); 
 } 
 
-.year { 
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
-} 
 
-.partBg { 
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
-}
+

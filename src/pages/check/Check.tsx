@@ -1,9 +1,20 @@
 import React, { useEffect } from 'react';
+import { useState } from 'react';
 import './check.css';
 import { motion } from 'framer-motion';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const Check: React.FC = () => {
+  const [selectedOption, setSelectedOption] = useState('');
+  const [selectedPlanId, setSelectedPlanId] = useState('');
+
+  const options = [
+    { id: 'credit-card', label: 'بطاقة ائتمان', icon: 'credit-card' },
+    { id: 'mobile-alt', label: 'فودافون كاش', icon: 'mobile-alt' },
+    { id: 'qrcode', label: 'إنستاباي', icon: 'qrcode' },
+  ];
+
+  
   useEffect(() => {
     window.scrollTo({ top: 5, behavior: 'smooth' });
   }, []);
@@ -17,23 +28,24 @@ const Check: React.FC = () => {
         transition={{ duration: 0.8, delay: 0.2 }}
       >
             <div dir="auto" className="text-center pt-7 ">
-          <i className="fas fa-credit-card fa-2xl text-gray-400"></i>
-          <span className="text-3xl font-medium text-gray-400 ">صفحة الدفع</span>
+          <i className="fas fa-credit-card fa-2xl"></i>
+          <span className="text-3xl font-medium text-gray-900 ">صفحة الدفع</span>
           <p className="py-3 text-gray-600">
             اختر الباقة المناسبة لك وأكمل عملية الدفع
           </p>
         </div>
-<div className='lg:flex gap-5 w-[100%]'>
-    <div className='lg:w-2/3'>
+<div className='lg:flex  w-[100%]  lg:my-5 '>
+
+    <div className='lg:w-[80%] '>
       
 
-        <div className="container transition-all hover:shadow-xl my-5 pb-5 custom-translate-up overflow-hidden rounded-2xl shadow-gray-800 w-[90%] mx-auto">
+        <div className="container transition-all hover:shadow-xl my-5 pb-5 custom-translate-up overflow-hidden rounded-2xl shadow-gray-400 w-[90%] mx-auto">
           <div className="text-right pr-6 partBg py-5 mb-5">
             <span className="text-2xl text-white">اختر باقة الاشتراك</span>
             <i className="fas fa-tag text-white fa-2xl"></i>
           </div>
 
-          <div className="row grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="row grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="inner relative text-center py-10 hover:scale-105 rounded-xl custom-translate-up transition-all bg-white shadow-xl hover:shadow-2xl">
               <label><input type="radio" name="payment" className="absolute top-5 left-5" /></label>
               <i className="fas fa-calendar-day fa-2xl"></i>
@@ -68,7 +80,7 @@ const Check: React.FC = () => {
               <p className="text-gray-700 pt-5 pb-5 text-xl">عام كامل</p>
             </div>
 
-            <div className="inner  relative text-center py-10 hover:scale-105 rounded-xl custom-translate-up transition-all bg-white shadow-xl hover:shadow-2xl">
+            <div className="inner shadow-gray-200 relative text-center py-10 hover:scale-105 rounded-xl custom-translate-up transition-all bg-white shadow-xl hover:shadow-2xl">
               <label><input type="radio" name="payment" className="absolute top-5 left-5" /></label>
               <div className="w-[50px] h-[50px] mx-auto rounded-full flex items-center justify-center bg-black">
                 <i className="fas fa-play fa-xl text-white"></i>
@@ -83,40 +95,66 @@ const Check: React.FC = () => {
           </div>
         </div>
 
-        <div className="bg-white w-[90%] shadow-xl rounded-xl overflow-hidden mx-auto hover:shadow-2xl custom-translate-up transition-all">
-          <div dir="auto" className="partBg text-right py-5 pr-5">
+        <div className="bg-black relative shadow-indigo-300 outline-1 outline-gray-700 w-[90%]  rounded-xl overflow-hidden mx-auto hover:shadow-lg custom-translate-up transition-all">
+           <div className='card-top-line'></div>
+          <div dir="auto" className=" text-right py-5 pr-5">
             <i className="fas fa-percentage text-white text-xl"></i>
-            <span className="text-white text-xl">كود الخصم</span>
+            <span className="main-text text-xl">كود الخصم</span>
           </div>
-          <input dir="rtl" type="text" className="pr-5 w-[90%] mt-5 mx-auto outline outline-2 outline-gray-200 block py-4 rounded-lg" placeholder="ادخل كود الخصم او كود السنتر" />
-          <button className="w-[90%] mb-5 mx-auto mt-1 py-3 rounded-lg text-blue-700 outline outline-2 font-bold outline-blue-700 hover:bg-blue-800 hover:text-white transition block">
+          <input dir="rtl" type="text" className="pr-5 w-[90%] mt-5 mx-auto  outline-2 outline-gray-600 mb-5 block py-4 main-color rounded-lg placeholder:text-gray-400" placeholder="ادخل كود الخصم او كود السنتر" />
+          <button className="w-[90%] mb-5 mx-auto mt-1 py-3 rounded-lg text-indigo-600  outline-2 font-bold outline-indigo-600 hover:bg-indigo-600 hover:text-white transition block">
             <span>تطبيق الكود</span>
             <i className="fas fa-check ml-2"></i>
           </button>
         </div>
 
-        <div className="bg-white w-[90%] my-10 rounded-xl overflow-hidden mx-auto hover:shadow-xl custom-translate-up transition-all">
-          <div dir="auto" className="partBg text-right py-5 pr-5">
+
+
+        <div className="relative outline-1 outline-gray-700  bg-black w-[90%] mx-auto mt-10 rounded-xl overflow-hidden shadow-lg hover:shadow-indigo-300 custom-translate-up transition-all">
+          <div className="card-top-line"></div>
+          <div dir="auto" className="text-right pb-5 pr-5">
             <span className="text-white text-xl">وسيلة الدفع</span>
           </div>
-          {['credit-card', 'mobile-alt', 'qrcode'].map((icon, index) => (
-            <div key={index} className="w-[90%] mx-auto relative">
-              <div className="text-center py-9 mt-5 rounded-xl bg-white shadow-xl hover:translate-y-[-5px] hover:scale-105 hover:shadow-xl hover:shadow-gray-300 transition-all">
-                <label><input type="radio" name="payWay" className="absolute top-5 left-5" /></label>
-                <i className={`fas fa-${icon} fa-2xl`}></i>
-                <h4 className="text-xl font-semibold mt-4">
-                  {icon === 'credit-card' ? 'بطاقة ائتمان' : icon === 'mobile-alt' ? 'فودافون كاش' : 'إنستاباي'}
-                </h4>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5  px-4 pb-6 bg-black">
+            {options.map((option) => (
+              <div
+                key={option.id}
+                onClick={() => setSelectedOption(option.id)}
+                className="relative  cursor-pointer"
+              >
+                
+                <div className="absolute top-7 left-1 z-888">
+                  <div className="w-3 h-3 border-2 border-white  rounded-full flex items-center justify-center">
+                    <div
+                      className={`w-3 h-3 rounded-full transition-all duration-200 ${
+                        selectedOption === option.id ? 'bg-white ' : ''
+                      }`}
+                    ></div>
+                  </div>
+                </div>
+
+              
+                <div className="relative overflow-hidden text-center py-9 rounded-xl main-color shadow-lg transition-all hover:shadow-indigo-500">
+                  <div className="card-top-line"></div>
+                  <i className={`fas fa-${option.icon} fa-2xl main-text`}></i>
+                  <h4 className="text-xl main-text font-semibold mt-8">{option.label}</h4>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+
+
         </div>
+
   </div>
 
-        <div className="lg:w-1/3 lg:mt-5 bg-white w-[90%]  rounded-xl overflow-hidden mx-auto hover:shadow-xl custom-translate-up transition-all">
-          <div dir="auto" className="partBg text-right py-5 pr-5">
-            <i className="fas fa-receipt text-2xl text-white"></i>
-            <span className="text-white text-2xl font-bold">ملخص الطلب</span>
+
+        <div className="relative overflow-hidden lg:w-[30%] my-10 md:mb-0  lg:ml-10 mx-auto lg:mt-[5px] bg-black text-white  w-[90%]   rounded-xl hover:shadow-xl  transition-all outline  outline-gray-200    ">
+          <div className='card-top-line'></div>
+          <div dir="auto" className=" text-right py-5 pr-5">
+            <i className="fas fa-receipt text-2xl "></i>
+            <span className=" text-2xl font-bold">ملخص الطلب</span>
           </div>
           <div className="w-[90%] mx-auto">
             <div dir="auto" className="flex justify-between items-center py-2">
@@ -128,8 +166,8 @@ const Check: React.FC = () => {
               <span className="text-lg">900 ج.م</span>
             </div>
             <div dir="auto" className="flex justify-between items-center py-2">
-              <span className="text-lg text-green-700">خصم العرض الخاص:</span>
-              <span className="text-lg text-green-700">-270 ج.م</span>
+              <span className="text-lg text-green-800">خصم العرض الخاص:</span>
+              <span className="text-lg text-green-800">-270 ج.م</span>
             </div>
             <div dir="auto" className="flex justify-between items-center py-2">
               <span className="text-lg">كود الخصم:</span>
@@ -137,19 +175,19 @@ const Check: React.FC = () => {
             </div>
             <hr />
             <div dir="auto" className="flex justify-between items-center py-2">
-              <span className="text-lg font-bold text-xl">المجموع:</span>
-              <span className="text-lg text-green-700">630 ج.م</span>
+              <span className="text-lg font-bold">المجموع:</span>
+              <span className="text-xl font-bold text-green-800">630 ج.م</span>
             </div>
-            <div dir="auto" className="bg-green-200 rounded outline-green-600 my-5 outline-1 py-5">
-              <i className="fas fa-gift text-green-950 font-bold text-xl px-2"></i>
+            <div dir="auto" className="bg-green-200 rounded outline-green-900 my-5 outline-2 py-5">
+              <i className="fas fa-gift text-green-950 font-bold text-xl px-5"></i>
               <span className="text-green-950 font-bold text-xl">وفرت 270 ج.م!</span>
             </div>
-            <button dir="auto" className="cursor-pointer partBg transition-all custom-translate-up rounded-xl py-3 w-full mb-5 mx-auto block">
+            <button dir="auto" className="cursor-pointer year transition-all custom-translate-up rounded-xl py-3 w-full mb-5 mx-auto block">
               <i className="fas fa-lock text-white text-xl font-bold"></i>
               <span className="font-bold text-xl text-white">تأكيد الدفع</span>
             </button>
-            <p dir="auto" className="mb-5 text-gray-500 text-center">
-              <i className="fas fa-shield-alt text-gray-500"></i>
+            <p dir="auto" className="mb-5 text-gray-100 text-center">
+              <i className="fas fa-shield-alt text-gray-300"></i>
               دفع آمن ومشفر
             </p>
           </div>
