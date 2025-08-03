@@ -56,8 +56,8 @@ const Check: React.FC = () => {
   
   <div className="card-top-line"></div>
   
-          <div className="absolute top-[-55px] right-[-55px] w-30 h-30 lovely-color rounded-full transform scale-100 group-hover:scale-125 transition-transform duration-300 z-10"></div> 
-                       <div className="absolute bottom-[-55px] left-[-55px] w-30 h-30 lovely-color rounded-full transform scale-100 group-hover:scale-125 transition-transform duration-300 z-10"></div> 
+          <div className="absolute top-[-55px] right-[-55px] w-25 h-25 lovely-color rounded-full transform scale-100 group-hover:scale-125 transition-transform duration-300 z-10"></div> 
+                       <div className="absolute bottom-[-55px] left-[-55px] w-25 h-25 lovely-color rounded-full transform scale-100 group-hover:scale-125 transition-transform duration-300 z-10"></div> 
   <label>
     <input
       type="radio"
@@ -85,11 +85,11 @@ const Check: React.FC = () => {
     selectedPlanId === 'semester' ? 'ring-2 ring-indigo-500' : ''
   }`}
 >
-            <div className="absolute top-[-55px] right-[-55px] w-30 h-30 lovely-color rounded-full transform scale-100 group-hover:scale-125 transition-transform duration-300 z-10"></div> 
-                       <div className="absolute bottom-[-55px] left-[-55px] w-30 h-30 lovely-color rounded-full transform scale-100 group-hover:scale-125 transition-transform duration-300 z-10"></div> 
+            <div className="absolute top-[-55px] right-[-55px] w-25 h-25 lovely-color rounded-full transform scale-100 group-hover:scale-125 transition-transform duration-300 z-10"></div> 
+                       <div className="absolute bottom-[-55px] left-[-55px] w-25 h-25 lovely-color rounded-full transform scale-100 group-hover:scale-125 transition-transform duration-300 z-10"></div> 
   <div className="card-top-line"></div>
-            <div className="absolute top-[-55px] right-[-55px] w-30 h-30 lovely-color rounded-full transform scale-100 group-hover:scale-125 transition-transform duration-300 z-10"></div> 
-                       <div className="absolute bottom-[-55px] left-[-55px] w-30 h-30 lovely-color rounded-full transform scale-100 group-hover:scale-125 transition-transform duration-300 z-10"></div> 
+            <div className="absolute top-[-55px] right-[-55px] w-25 h-25 lovely-color rounded-full transform scale-100 group-hover:scale-125 transition-transform duration-300 z-10"></div> 
+                       <div className="absolute bottom-[-55px] left-[-55px] w-25 h-25 lovely-color rounded-full transform scale-100 group-hover:scale-125 transition-transform duration-300 z-10"></div> 
   <label>
     <input
       type="radio"
@@ -149,8 +149,8 @@ const Check: React.FC = () => {
   }`}
 >
   <div className="card-top-line"></div>
-            <div className="absolute top-[-55px] right-[-55px] w-30 h-30 lovely-color rounded-full transform scale-100 group-hover:scale-125 transition-transform duration-300 z-10"></div> 
-                       <div className="absolute bottom-[-55px] left-[-55px] w-30 h-30 lovely-color rounded-full transform scale-100 group-hover:scale-125 transition-transform duration-300 z-10"></div> 
+            <div className="absolute top-[-55px] right-[-55px] w-25 h-25 lovely-color rounded-full transform scale-100 group-hover:scale-125 transition-transform duration-300 z-10"></div> 
+                       <div className="absolute bottom-[-55px] left-[-55px] w-25 h-25 lovely-color rounded-full transform scale-100 group-hover:scale-125 transition-transform duration-300 z-10"></div> 
   <label>
     <input
       type="radio"
@@ -231,7 +231,7 @@ const Check: React.FC = () => {
   </div>
 
 
-        <div className="relative overflow-hidden lg:w-[30%] my-10 md:mb-0  lg:ml-10 mx-auto lg:mt-[5px] bg-black text-white  w-[90%]   rounded-xl  mx-auto hover:shadow-xl  transition-all outline  outline-gray-200    ">
+        <div className="relative overflow-hidden lg:w-[30%] my-10 md:mb-0  lg:ml-10 mx-auto lg:mt-[5px] bg-black text-white  w-[90%]   rounded-xl hover:shadow-xl  transition-all outline  outline-gray-200    ">
           <div className='card-top-line'></div>
           <div dir="auto" className=" text-right py-5 pr-5">
             <i className="fas fa-receipt text-2xl "></i>
