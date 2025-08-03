@@ -34,5 +34,10 @@ div.benifit {
   transform: translateY(-3px); 
 } 
 
-
+.text-indigo-important {
+  color: #4f46e5 !important;
+}
+.text-black-important {
+  color: #0c0d0e !important;
+}
 

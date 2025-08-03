@@ -26,10 +26,16 @@ const Payment: React.FC = () => {
               </h3>
               <p className="card-text text-white">احصل على خصم 30% على الاشتراك السنوي</p>
               <div className='custom-translate-up bg-white hover:bg-gray-100 text-center mt-5  py-3 rounded-lg md:w-[25%] w-[70%] mx-auto'>
-                <Link to="/check">
-                  <span className='benifit text-xl font-bold text-indigo-600'>استفد من العرض الآن </span>
-                  <span><i className='fas fa-tag me-3 text-indigo-600'></i></span>
-                </Link>
+           <Link to="/check"> 
+  <span className="benifit text-xl font-bold text-indigo-important">
+    استفد من العرض الآن
+  </span>
+
+  <span>
+    <i className="fas fa-tag me-3 text-indigo-important"></i>
+  </span>
+</Link>
+
               </div>
             </div>
           </div>
@@ -145,7 +151,7 @@ const Payment: React.FC = () => {
                 </li>
               </ul>
               <div className="custom-translate-up transition ">
-                <Link to='/check' className="text-lg font-bold py-3 px-5 bg-white rounded-lg text-black hover:bg-gray-300">
+                <Link to='/check' className="text-lg font-bold py-3 px-5 bg-white rounded-lg text-black-important hover:bg-gray-300 hover:text-black transition transform hover:outline-0  custom-translate-up">
                   اختر الخطه
                 </Link>
               </div>
