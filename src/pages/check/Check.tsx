@@ -27,10 +27,10 @@ const Check: React.FC = () => {
         exit={{ opacity: 0, y: 30 }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
-            <div dir="auto" className="text-center pt-7 ">
-          <i className="fas fa-credit-card fa-2xl"></i>
-          <span className="text-3xl font-medium text-gray-900 ">صفحة الدفع</span>
-          <p className="py-3 text-gray-600">
+            <div dir="auto" className="text-center pt-7   ">
+          <i className="fas fa-credit-card fa-2xl main-text"></i>
+          <span className="text-3xl font-medium main-text ">صفحة الدفع</span>
+          <p className="py-3 main-text">
             اختر الباقة المناسبة لك وأكمل عملية الدفع
           </p>
         </div>
@@ -39,59 +39,140 @@ const Check: React.FC = () => {
     <div className='lg:w-[80%] '>
       
 
-        <div className="container transition-all hover:shadow-xl my-5 pb-5 custom-translate-up overflow-hidden rounded-2xl shadow-gray-400 w-[90%] mx-auto">
-          <div className="text-right pr-6 partBg py-5 mb-5">
-            <span className="text-2xl text-white">اختر باقة الاشتراك</span>
+         <div className="relative outline-1 outline-gray-700 pt-10  bg-black w-[90%] mx-auto mb-10 rounded-xl overflow-hidden shadow-lg hover:shadow-indigo-300 custom-translate-up transition-all pb-10">
+          <div className="card-top-line"></div>
+          <div className="text-right pr-6 pb-[20px]   ">
+            <span className="text-2xl text-white pb-[5px]">اختر باقة الاشتراك</span>
             <i className="fas fa-tag text-white fa-2xl"></i>
           </div>
 
-          <div className="row grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="inner relative text-center py-10 hover:scale-105 rounded-xl custom-translate-up transition-all bg-white shadow-xl hover:shadow-2xl">
-              <label><input type="radio" name="payment" className="absolute top-5 left-5" /></label>
-              <i className="fas fa-calendar-day fa-2xl"></i>
-              <h5 className="text-2xl font-bold my-4 text-gray-900">اشتراك شهري</h5>
-              <div dir="auto" className="py-5">
-                <span className="text-indigo-600 text-3xl font-bold">150</span>
-                <span className="text-3xl text-indigo-600 font-bold">ج.م</span>
-              </div>
-              <p className="text-gray-500 text-xl">شهر واحد</p>
-            </div>
+          <div className="row px-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5  shadow-2xl   ">
+     <div
+  onClick={() => setSelectedPlanId('monthly')}
+  className={`inner overflow-hidden outline-1 outline-gray-700 relative text-center py-10 rounded-xl custom-translate-up group hover:translate-y-[-5px] transition-all main-color hover:shadow-lg hover:shadow-indigo-500 cursor-pointer ${
+    selectedPlanId === 'monthly' ? 'ring-2 ring-indigo-500' : ''
+  }`}
+>
+  
+  <div className="card-top-line"></div>
+  
+          <div className="absolute top-[-55px] right-[-55px] w-25 h-25 lovely-color rounded-full transform scale-100 group-hover:scale-125 transition-transform duration-300 z-10"></div> 
+                       <div className="absolute bottom-[-55px] left-[-55px] w-25 h-25 lovely-color rounded-full transform scale-100 group-hover:scale-125 transition-transform duration-300 z-10"></div> 
+  <label>
+    <input
+      type="radio"
+      name="payment"
+      value="monthly"
+      checked={selectedPlanId === 'monthly'}
+      onChange={() => setSelectedPlanId('monthly')}
+      className="absolute top-3 left-1"
+    />
+  </label>
 
-            <div className="inner hover:scale-105 relative text-center py-10 rounded-xl custom-translate-up transition-all bg-white shadow-xl hover:shadow-2xl">
-              <label><input type="radio" name="payment" className="absolute top-5 left-5" /></label>
-              <i className="fas fa-calendar-alt fa-2xl"></i>
-              <h5 className="text-2xl font-bold my-4 text-gray-900">اشتراك فصلى</h5>
-              <div dir="auto" className="py-5">
-                <span className="text-indigo-600 text-3xl font-bold">500</span>
-                <span className="text-3xl text-indigo-600 font-bold">ج.م</span>
-              </div>
-              <p className="text-gray-500 text-xl">فصل دراسي كامل</p>
-            </div>
+  <div className="w-[50px] h-[50px] mx-auto rounded-full flex items-center justify-center year">
+    <i className="fas fa-calendar-day fa-2xl main-text"></i>
+  </div>
+  <h5 className="text-lg font-semibold my-4 main-text">اشتراك شهري</h5>
+  <div dir="auto" className="py-5">
+    <span className="text-indigo-600 text-3xl font-bold">150</span>
+    <span className="text-3xl text-indigo-600 font-bold">ج.م</span>
+  </div>
+  <p className="text-gray-400 text-lg">شهر واحد</p>
+</div>
+<div
+  onClick={() => setSelectedPlanId('semester')}
+  className={`inner relative overflow-hidden outline-1 outline-gray-700 text-center py-10 rounded-xl custom-translate-up transition-all main-color group hover:translate-y-[-5px] shadow-lg hover:shadow-indigo-500 cursor-pointer ${
+    selectedPlanId === 'semester' ? 'ring-2 ring-indigo-500' : ''
+  }`}
+>
+            <div className="absolute top-[-55px] right-[-55px] w-25 h-25 lovely-color rounded-full transform scale-100 group-hover:scale-125 transition-transform duration-300 z-10"></div> 
+                       <div className="absolute bottom-[-55px] left-[-55px] w-25 h-25 lovely-color rounded-full transform scale-100 group-hover:scale-125 transition-transform duration-300 z-10"></div> 
+  <div className="card-top-line"></div>
+            <div className="absolute top-[-55px] right-[-55px] w-25 h-25 lovely-color rounded-full transform scale-100 group-hover:scale-125 transition-transform duration-300 z-10"></div> 
+                       <div className="absolute bottom-[-55px] left-[-55px] w-25 h-25 lovely-color rounded-full transform scale-100 group-hover:scale-125 transition-transform duration-300 z-10"></div> 
+  <label>
+    <input
+      type="radio"
+      name="payment"
+      value="semester"
+      checked={selectedPlanId === 'semester'}
+      onChange={() => setSelectedPlanId('semester')}
+      className="absolute top-3 left-1"
+    />
+  </label>
 
-            <div className="inner year relative overflow-hidden shadow-gray-400 hover:scale-95 text-center pt-10 rounded-xl bg-white hover:translate-y-[-5px] transition hover:shadow-3xl hover:shadow-gray-300">
-              <div className="absolute top-[15px] right-[-33px] card text-white rotate-45 py-1 font-bold px-8">الأكثر شعبية</div>
-              <label><input type="radio" name="payment" className="absolute top-5 left-5" /></label>
-              <i className="fas fa-calendar fa-2xl text-white"></i>
-              <h4 dir="auto" className="text-2xl font-bold my-4 text-white">اشتراك سنوى</h4>
-              <div className="pt-5">
-                <span dir="auto" className="text-white text-3xl font-bold">ج.م</span>
-                <span className="text-white text-3xl font-bold">900</span>
-              </div>
-              <p className="text-gray-700 pt-5 pb-5 text-xl">عام كامل</p>
-            </div>
+  <div className="w-[50px] h-[50px] mx-auto rounded-full flex items-center justify-center year">
+    <i className="fas fa-calendar-alt fa-2xl main-text"></i>
+  </div>
+  <h5 className="text-lg font-semibold my-4 main-text">اشتراك فصلى</h5>
+  <div dir="auto" className="py-5">
+    <span className="text-indigo-600 text-3xl font-bold">500</span>
+    <span className="text-3xl text-indigo-600 font-bold">ج.م</span>
+  </div>
+  <p className="text-gray-400 text-lg">فصل دراسي كامل</p>
+</div>
+<div
+  onClick={() => setSelectedPlanId('yearly')}
+  className={`inner bg-black relative overflow-hidden hover:  text-center pt-10 rounded-xl outline-1 outline-gray-700 hover:translate-y-[-5px] transition hover:shadow-xl hover:shadow-indigo-300 cursor-pointer ${
+    selectedPlanId === 'yearly' ? 'ring-2 ring-indigo-500' : ''
+  }`}
+>
+  <div className="absolute top-[16px] right-[-38px] year text-white rotate-45 py-1 font-bold px-8">
+    الأكثر شعبية
+  </div>
+  <label>
+    <input
+      type="radio"
+      name="payment"
+      value="yearly"
+      checked={selectedPlanId === 'yearly'}
+      onChange={() => setSelectedPlanId('yearly')}
+       className="absolute top-3 left-1"
+    />
+    <div className="card-top-line"></div>
+  </label>
 
-            <div className="inner shadow-gray-200 relative text-center py-10 hover:scale-105 rounded-xl custom-translate-up transition-all bg-white shadow-xl hover:shadow-2xl">
-              <label><input type="radio" name="payment" className="absolute top-5 left-5" /></label>
-              <div className="w-[50px] h-[50px] mx-auto rounded-full flex items-center justify-center bg-black">
-                <i className="fas fa-play fa-xl text-white"></i>
-              </div>
-              <h5 className="text-2xl font-bold my-4 text-gray-900">محاضرة منفصلة</h5>
-              <div dir="auto" className="py-5">
-                <span className="text-indigo-600 text-3xl font-bold">25</span>
-                <span className="text-3xl text-indigo-600 font-bold">ج.م</span>
-              </div>
-              <p className="text-gray-500 text-xl">محاضرة واحدة</p>
-            </div>
+  <div className="w-[50px] h-[50px] mx-auto rounded-full flex items-center justify-center year">
+    <i className="fas fa-calendar fa-2xl text-white"></i>
+  </div>
+  <h4 dir="auto" className="text-lg font-bold my-4 text-white">اشتراك سنوى</h4>
+  <div className="pt-5">
+    <span dir="auto" className="text-white text-3xl font-bold">ج.م</span>
+    <span className="text-white  text-3xl font-bold">900</span>
+  </div>
+  <p className="text-gray-400 text-lg py-5">عام كامل</p>
+</div>
+<div
+  onClick={() => setSelectedPlanId('single')}
+  className={`inner group hover:translate-y-[-5px] relative overflow-hidden outline-1 outline-gray-700 text-center py-10 rounded-xl custom-translate-up transition-all main-color hover:shadow-lg hover:shadow-indigo-500 cursor-pointer ${
+    selectedPlanId === 'single' ? 'ring-2 ring-indigo-500' : ''
+  }`}
+>
+  <div className="card-top-line"></div>
+            <div className="absolute top-[-55px] right-[-55px] w-25 h-25 lovely-color rounded-full transform scale-100 group-hover:scale-125 transition-transform duration-300 z-10"></div> 
+                       <div className="absolute bottom-[-55px] left-[-55px] w-25 h-25 lovely-color rounded-full transform scale-100 group-hover:scale-125 transition-transform duration-300 z-10"></div> 
+  <label>
+    <input
+      type="radio"
+      name="payment"
+      value="single"
+      checked={selectedPlanId === 'single'}
+      onChange={() => setSelectedPlanId('single')}
+    className="absolute top-3 left-1"
+    />
+  </label>
+
+  <div className="w-[50px] h-[50px] mx-auto rounded-full flex items-center justify-center year">
+    <i className="fas fa-play fa-xl text-white"></i>
+  </div>
+  <h4 dir="auto" className="text-lg font-bold my-4 text-white">محاضرة منفصلة</h4>
+  <div dir="auto" className="py-5">
+    <span className="text-indigo-600 text-3xl font-bold">25</span>
+    <span className="text-3xl text-indigo-600 font-bold">ج.م</span>
+  </div>
+  <p className="text-gray-300 text-lg">محاضرة واحدة</p>
+</div>
+            
           </div>
         </div>
 
