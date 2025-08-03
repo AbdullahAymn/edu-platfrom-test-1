@@ -261,7 +261,7 @@ const Check: React.FC = () => {
             </div>
             <div dir="auto" className="bg-green-200 rounded outline-green-900 my-5 outline-2 py-5">
               <i className="fas fa-gift text-green-950 font-bold text-xl px-5"></i>
-              <span className="text-green-950 font-bold text-xl">وفرت 270 ج.م!</span>
+              <span className="text-green-important font-bold text-xl">وفرت 270 ج.م!</span>
             </div>
             <button dir="auto" className="cursor-pointer year transition-all custom-translate-up rounded-xl py-3 w-full mb-5 mx-auto block">
               <i className="fas fa-lock text-white text-xl font-bold"></i>
